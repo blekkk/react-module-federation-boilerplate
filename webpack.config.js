@@ -7,7 +7,7 @@ module.exports = (env) => {
   return {
     mode: "development",
     devServer: {
-      port: 3001,
+      port: 3009,
       static: {
         directory: path.join(__dirname, 'public'),
       },
@@ -38,13 +38,13 @@ module.exports = (env) => {
         },
         {
           test: /\.css$/i,
-          use: ["style-loader", "css-loader", "postcss-loader"],
+          use: ["style-loader", "css-loader"],
         },
       ],
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: "Anime",
+        name: "EXAMPLE_PLEASE_CHANGE",
         filename:
           'remoteEntry.js',
         shared: {
